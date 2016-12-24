@@ -1,0 +1,22 @@
+SQL SERVER (versión 2016): Error 40
+
+Para solucionar el error 40 que indica SQL SERVER realizar los siguientes pasos:
+
+1.- Entrar a SQL SERVER CONFIGURATION MANAGER
+	Se localiza en Disco C:/Windows/SysWOW64/SQLServerManager13.msc
+	(o acceso directo: Sql Server Configuration Manager)
+2.- Localizar SQL Server Network Configuration y expandir
+3.- Clic en Protocols for MSSQLSERVER
+4.- Siguiente es dar clic en Named Pipes y dar Habilitar (enable)
+5.- Reiniciar el servicio
+
+Si no se ha solucionado el error:
+
+Lo siguiente es ir a Control Panel -> System and security -> Administrative Tools
+		     -> Services, cambiar a SQL Server Agent (SQLEXPRESS) a Automatic
+				, cambiar a SQL Server Browser a Automatic	
+Al realizar estos pasos dar clic en Star en la parte superior izquierda para 
+SQL Server Browser
+
+Ahora ir a SQL SERVER CONFIGURATION MANAGER -> SQL Server Services y observar
+el estado de los servicios 
